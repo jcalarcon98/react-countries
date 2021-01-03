@@ -1,0 +1,35 @@
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-input-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 17px;
+  left: 30px;
+}
+
+.search-input {
+  padding: 15px 5px 15px 70px;
+  height: 48px;
+  width: 400px;
+  border: none;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+  outline: 0px;
+  border-radius: 5px;
+}
+
+.select {
+  width: 200px;
+  padding: 15px;
+  height: 48px;
+  border: 0px;
+  outline: 0px;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}

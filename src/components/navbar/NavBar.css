@@ -1,0 +1,30 @@
+.navbar {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0px 60px;
+  width: 100%;
+}
+
+.text {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.dark-mode {
+  display: flex;
+  width: 105px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode:hover {
+  cursor: pointer;
+}
+
+.text-dark {
+  font-weight: 600;
+}
