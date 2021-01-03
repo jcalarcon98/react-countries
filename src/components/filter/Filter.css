@@ -1,6 +1,7 @@
 .filter-container {
   display: flex;
   justify-content: space-between;
+  border: 1px solid red;
 }
 
 .search-input-container {
@@ -32,4 +33,23 @@
   background: hsl(0, 0%, 100%);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+
+  .filter-container {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+
+  .search-input {
+    padding: 15px 5px 15px 70px;
+    height: 48px;
+    width: 100%;
+    border: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+    outline: 0px;
+    border-radius: 5px;
+  }
 }

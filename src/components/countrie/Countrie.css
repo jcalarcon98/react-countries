@@ -1,5 +1,5 @@
 .card-container {
-  min-width:280px;
+  min-width:200px;
   height: 380px;
   background: hsl(0, 0%, 100%);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
@@ -15,7 +15,6 @@
 .card-image img{
   width: 100%;
 }
-
 
 .card-text {
   margin-left: 20px;
