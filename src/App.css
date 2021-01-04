@@ -5,3 +5,10 @@
   padding: 40px 70px;
   margin: auto;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .main-container {
+    padding: 20px 15px;
+  }  
+}

@@ -1,5 +1,5 @@
-import './App.css';
 import { Countries, Filter, NavBar } from './components';
+import './App.css';
 
 function App() {
   return (
