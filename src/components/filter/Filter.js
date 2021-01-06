@@ -7,7 +7,6 @@ import './Filter.css';
 const Filter = () => {
 
   const { filter, changeCountrie, changeContinent } = useCountries();
-
   const { continent, countrie } = filter;
 
   return (
@@ -24,9 +23,9 @@ const Filter = () => {
       <div className="filter-dropdow-box">
         <select value={ continent } onChange={ changeContinent } className='select' name="continents" id="continents">
           <option value="africa">África</option>
-          <option value="america">America</option>
+          <option value="americas">America</option>
           <option value="asia">Asia</option>
-          <option value="europa">Europa</option>
+          <option value="europe">Europa</option>
           <option value="oceania">Oceania</option>
         </select>
       </div>

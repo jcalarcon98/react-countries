@@ -1,21 +1,27 @@
 import './Countrie.css';
 
-const Countrie = () => {
+const Countrie = ({
+  name,
+  population,
+  region,
+  capital,
+  flag
+}) => {
   return (
     <div className="card-container">
       <div className="card-image">
-        <img src="https://restcountries.eu/data/abw.svg" alt=""/>
+        <img src={ flag } alt="name" className='img'/>
       </div>
       <div className="card-text">
-        <h3>United States of America</h3>
+        <h3>{ name }</h3>
         <p>
-          Population: <span>192873812</span>
+          Population: <span>{ population }</span>
         </p>
         <p>
-          Region: <span>Europe</span>
+          Region: <span>{ region }</span>
         </p>
         <p>
-          Capital: <span>Berlin</span>
+          Capital: <span>{ capital }</span>
         </p>
       </div>
     </div>
