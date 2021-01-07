@@ -22,7 +22,7 @@ export const CountrieProvider = ({children}) => {
 
   useEffect(() => {
 
-    setCountries(currentCountries.filter(currentCountrie => currentCountrie.name.includes(countrie)));
+    setCountries(currentCountries.filter(currentCountrie => currentCountrie.name.toLowerCase().includes(countrie.toLowerCase())));
 
   }, [currentCountries, countrie]);
 
