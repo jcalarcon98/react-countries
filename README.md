@@ -11,6 +11,8 @@
 
 > React Application to visualize world's countries
 
+# Demo
+You can see a demo here: https://jcalarcon98.github.io/react-countries/
 ## Install
 
 ```sh
