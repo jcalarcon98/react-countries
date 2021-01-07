@@ -10,12 +10,11 @@ const Countries = () => {
 
   const  {continent, countrie} = filter;
   return (
-    <div className="container">
+    <div className={countries.length === 1 ? "container container-one" : "container"}>
       {
         countries.length === 0 && 
         <Alert message={`There isn't any countrie with the name ${countrie} in ${continent.toUpperCase()} continent`}/>
       }
-
 
       {
         countries.map( countrie => (

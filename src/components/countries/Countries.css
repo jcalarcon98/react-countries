@@ -7,6 +7,10 @@
   grid-gap: 50px;
 }
 
+.container-one {
+  width: 287.5px ;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
 
   .container {
