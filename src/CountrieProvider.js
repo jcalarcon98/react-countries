@@ -41,7 +41,7 @@ export const CountrieProvider = ({children}) => {
   }, [continent]);
 
   return (
-    <CountrieContext.Provider value={ { filter, changeCountrie, changeContinent, countries}}>
+    <CountrieContext.Provider value={ { filter, changeCountrie, changeContinent, countries } }>
       { children }
     </CountrieContext.Provider>
   );
