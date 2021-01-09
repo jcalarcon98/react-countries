@@ -26,6 +26,7 @@ npm run start
 ```
 
 ## Run tests
+> Tests aren't yet available.
 
 ```sh
 npm run test
