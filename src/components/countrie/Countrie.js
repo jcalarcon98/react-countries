@@ -1,3 +1,4 @@
+import { useTheme } from '../../providers/ThemeColorProvider';
 import './Countrie.css';
 
 const Countrie = ({
@@ -7,6 +8,9 @@ const Countrie = ({
   capital,
   flag
 }) => {
+
+  const { theme } = useTheme();
+
   return (
     <div className="card-container">
       <div className="card-image">

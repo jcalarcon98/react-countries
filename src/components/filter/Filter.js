@@ -15,16 +15,25 @@ const Filter = () => {
   return (
     <div className="filter-container">
       <div className="search-input-container">
-
         <IconContext.Provider value={{ color: "gray", className: "global-class-name" }}>
           <div className="search-icon">
             <FaSearch />
           </div>
         </IconContext.Provider>
-        <input value={ countrie } onChange={ changeCountrie } type='text' className="search-input" placeholder='Search for a country...'/>
+        <input 
+          value={ countrie }
+          onChange={ changeCountrie }
+          type='text'
+          className={`search-input ${theme ? "dark-mode dark-place" : "light-mode"}`}
+          placeholder='Search for a country...'/>
       </div>
       <div className="filter-dropdow-box">
-        <select value={ continent } onChange={ changeContinent } className='select' name="continents" id="continents">
+        <select 
+          value={ continent }
+          onChange={ changeContinent }
+          className={`select ${theme ? "dark-mode dark-place dark-text" : "light-mode"}`}
+          name="continents"
+          id="continents">
           <option value="africa">África</option>
           <option value="americas">America</option>
           <option value="asia">Asia</option>
