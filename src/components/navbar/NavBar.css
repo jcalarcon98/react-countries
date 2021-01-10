@@ -1,5 +1,4 @@
 .navbar {
-  background: hsl(0, 0%, 100%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
   display: flex;
   align-items: center;
@@ -28,6 +27,7 @@
 .text-dark {
   font-weight: 600;
 }
+
 
 @media (min-width: 320px) and (max-width: 480px) {
 

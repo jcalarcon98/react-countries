@@ -1,27 +1,34 @@
-import { FaRegMoon } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
+import { useTheme } from "../../providers/ThemeColorProvider";
 import './NavBar.css';
 
 const NavBar = () => {
 
-  const handleDarkMode = () => console.log('Dark mode is disable');
+  const { theme, setTheme} = useTheme();
 
+  const handleDarkMode = () => {
+    
+    document.body.className = !theme ? "dark-body" : "light-body";
+    setTheme(!theme);
+  }
   return (
     
-    <div className="navbar">
+    <div className={ `navbar ${ theme ? 'dark-mode': 'light-mode'}` }>
 
-      <div className="text">
+      <div className={`text ${ theme ? 'dark-text': 'light-text'}` }>
         Where in the World?
       </div>
 
       <div onClick={ handleDarkMode } className="dark-toggle">
-        <FaRegMoon />
-        <div className="text-dark">Dark Mode</div>
+        <IconContext.Provider value={{color : theme ? 'white': 'black' }}>
+          <FaMoon />
+        </IconContext.Provider>
+        <div className={ `text-dark ${ theme ? 'dark-text': 'light-text'}`}>Dark Mode</div>
       </div>
     </div>
 
   );
-
 };
-
 
 export default NavBar;

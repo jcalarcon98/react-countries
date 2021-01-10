@@ -4,9 +4,9 @@ import { ThemeColorProvider } from "./providers/ThemeColorProvider";
 import "./App.css";
 
 function App() {
+
   return (
-    <ThemeColorProvider>
-      <div className="dark-mode">
+      <ThemeColorProvider>
         <NavBar />
         <div className="main-container">
           <CountrieProvider>
@@ -14,8 +14,7 @@ function App() {
             <Countries />
           </CountrieProvider>
         </div>
-      </div>
-    </ThemeColorProvider>
+      </ThemeColorProvider>
   );
 }
 

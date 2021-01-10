@@ -7,6 +7,10 @@
   margin: 0;
 }
 
-body {
-  background-color: hsl(0, 0%, 98%);
+.light-body {
+  background: hsl(0, 0%, 98%);
+}
+
+.dark-body {
+  background: hsl(207, 26%, 17%);
 }

@@ -6,13 +6,27 @@
   margin: auto;
 }
 
+.all {
+  width: 100%;
+  height: 100%;
+}
+
 .light-mode {
-  background-color: red;
+  background: hsl(0, 0%, 98%);
 }
 
 .dark-mode {
-  background-color: blue;
+  background: hsl(209, 23%, 22%);
 }
+
+.dark-text {
+  color: hsl(0, 0%, 100%);
+}
+
+.light-text {
+  background: (200, 15%, 8%)
+}
+
 
 @media (min-width: 320px) and (max-width: 480px) {
 
