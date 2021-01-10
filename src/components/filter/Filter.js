@@ -9,7 +9,6 @@ const Filter = () => {
 
   const { filter, changeCountrie, changeContinent } = useCountries();
   const { theme } = useTheme();
-  console.log(theme);
   const { continent, countrie } = filter;
 
   return (

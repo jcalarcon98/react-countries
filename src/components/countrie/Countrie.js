@@ -12,20 +12,20 @@ const Countrie = ({
   const { theme } = useTheme();
 
   return (
-    <div className="card-container">
+    <div className={`card-container ${theme ? "dark-mode" : "light-mode"}`}>
       <div className="card-image">
         <img src={ flag } alt="name" className='img'/>
       </div>
-      <div className="card-text">
+      <div className={`card-text ${theme ? "dark-text" : "light-text"}`}>
         <h3>{ name }</h3>
         <p>
-          Population: <span>{ population }</span>
+          Population: <span className={`${theme ? 'dark-span' : 'light-span'}`}>{ population }</span>
         </p>
         <p>
-          Region: <span>{ region }</span>
+          Region: <span className={`${theme ? 'dark-span' : 'light-span'}`}>{ region }</span>
         </p>
         <p>
-          Capital: <span>{ capital }</span>
+          Capital: <span className={`${theme ? 'dark-span' : 'light-span'}`}>{ capital }</span>
         </p>
       </div>
     </div>

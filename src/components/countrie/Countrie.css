@@ -1,6 +1,5 @@
 .card-container {
   height: 380px;
-  background: hsl(0, 0%, 100%);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   overflow: hidden;
@@ -34,8 +33,14 @@
   font-weight: 600;
 }
 
-.card-text span {
+.light-span {
   color: hsl(0, 0%, 52%); 
+  font-weight: 200;
+}
+
+.dark-span{
+  color: white;
+  font-weight: 300;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
