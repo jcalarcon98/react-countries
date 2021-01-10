@@ -1,21 +1,21 @@
-import { Countries, Filter, NavBar } from './components';
-import { CountrieProvider } from './providers/CountrieProvider';
-import './App.css';
-import { ThemeColorProvider } from './providers/ThemeColorProvider';
+import { Countries, Filter, NavBar } from "./components";
+import { CountrieProvider } from "./providers/CountrieProvider";
+import { ThemeColorProvider } from "./providers/ThemeColorProvider";
+import "./App.css";
 
 function App() {
   return (
-    <> 
-      <ThemeColorProvider>
+    <ThemeColorProvider>
+      <div className="dark-mode">
         <NavBar />
-        <div className="main-container dark-mode">
-          <CountrieProvider >
-            <Filter />        
-            <Countries /> 
-          </CountrieProvider>        
+        <div className="main-container">
+          <CountrieProvider>
+            <Filter />
+            <Countries />
+          </CountrieProvider>
         </div>
-      </ThemeColorProvider>      
-    </>
+      </div>
+    </ThemeColorProvider>
   );
 }
 
