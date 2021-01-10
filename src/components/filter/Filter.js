@@ -1,12 +1,15 @@
 
 import { FaSearch } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { useCountries } from '../../CountrieProvider';
+import { useCountries } from '../../providers/CountrieProvider';
+import { useTheme } from '../../providers/ThemeColorProvider';
 import './Filter.css';
 
 const Filter = () => {
 
   const { filter, changeCountrie, changeContinent } = useCountries();
+  const { theme } = useTheme();
+  console.log(theme);
   const { continent, countrie } = filter;
 
   return (

@@ -14,14 +14,14 @@
   font-size: 20px;
 }
 
-.dark-mode {
+.dark-toggle {
   display: flex;
   width: 105px;
   justify-content: space-between;
   align-items: center;
 }
 
-.dark-mode:hover {
+.dark-toggle:hover {
   cursor: pointer;
 }
 

@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { getCountriesByContinent } from "./api";
-import { useFilter } from "./hooks/useFilter";
+import { getCountriesByContinent } from "../api";
+import { useFilter } from "../hooks/useFilter";
 
 const CountrieContext = createContext();
 

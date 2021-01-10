@@ -1,4 +1,4 @@
-import { useCountries } from '../../CountrieProvider';
+import { useCountries } from '../../providers/CountrieProvider';
 import { Alert } from '../alert/Alert';
 import Countrie from '../countrie/Countrie';
 

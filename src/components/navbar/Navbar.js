@@ -13,7 +13,7 @@ const NavBar = () => {
         Where in the World?
       </div>
 
-      <div onClick={ handleDarkMode } className="dark-mode">
+      <div onClick={ handleDarkMode } className="dark-toggle">
         <FaRegMoon />
         <div className="text-dark">Dark Mode</div>
       </div>
