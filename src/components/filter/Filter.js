@@ -15,7 +15,7 @@ const Filter = () => {
   return (
     <div className="filter-container">
       <div className="search-input-container">
-        <IconContext.Provider value={{ color: "gray", className: "global-class-name" }}>
+        <IconContext.Provider value={{ color: `${theme ? "white" : "gray" }`, className: "global-class-name" }}>
           <div className="search-icon">
             <FaSearch />
           </div>
@@ -24,7 +24,7 @@ const Filter = () => {
           value={ countrie }
           onChange={ changeCountrie }
           type='text'
-          className={`search-input ${theme ? "dark-mode dark-place" : "light-mode"}`}
+          className={`search-input ${theme ? "dark-mode dark-place dark-text" : "light-mode"}`}
           placeholder='Search for a country...'/>
       </div>
       <div className="filter-dropdow-box">

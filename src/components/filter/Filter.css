@@ -21,13 +21,15 @@
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
   outline: 0px;
   border-radius: 5px;
-  color: white;
 }
 
 .dark-place::placeholder{
   color: hsl(0, 0%, 100%);
 }
 
+.light-place::placeholder{
+  color: black;
+}
 .select {
   width: 200px;
   padding: 15px;
