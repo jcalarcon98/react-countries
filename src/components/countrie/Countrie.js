@@ -28,6 +28,11 @@ const Countrie = ({
           Capital: <span className={`${theme ? 'dark-span' : 'light-span'}`}>{ capital }</span>
         </p>
       </div>
+      <div>
+        <button className="btn-info">
+
+        </button>
+      </div>
     </div>
   )
 };

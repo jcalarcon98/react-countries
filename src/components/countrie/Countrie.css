@@ -43,6 +43,10 @@
   font-weight: 300;
 }
 
+.btn-info {
+  border-radius: 5px;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
 
   .card-container {
