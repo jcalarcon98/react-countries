@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useTheme } from '../../providers/ThemeColorProvider';
 import './Countrie.css';
 
@@ -29,9 +30,7 @@ const Countrie = ({
         </p>
       </div>
       <div>
-        <button className="btn-info">
-
-        </button>
+        
       </div>
     </div>
   )

@@ -2,6 +2,7 @@ import { Countries, Filter, NavBar } from "./components";
 import { CountrieProvider } from "./providers/CountrieProvider";
 import { ThemeColorProvider } from "./providers/ThemeColorProvider";
 import "./App.css";
+import AppRouter from "./routers/AppRouter";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
         <div className="main-container">
           <CountrieProvider>
             <Filter />
-            <Countries />
+            <AppRouter />
           </CountrieProvider>
         </div>
       </ThemeColorProvider>
