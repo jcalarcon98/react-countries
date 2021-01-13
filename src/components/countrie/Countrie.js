@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useTheme } from '../../providers/ThemeColorProvider';
 import './Countrie.css';
 
 const Countrie = ({
+  alpha2Code,
   name,
   population,
   region,
@@ -10,10 +11,16 @@ const Countrie = ({
   flag
 }) => {
 
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push(`/countrie/${alpha2Code}`);
+  };
+
   const { theme } = useTheme();
 
   return (
-    <div className={`card-container ${theme ? "dark-mode" : "light-mode"}`}>
+    <div onClick={ handleClick }  className={`card-container ${theme ? "dark-mode" : "light-mode"}`}>
       <div className="card-image">
         <img src={ flag } alt="name" className='img'/>
       </div>
@@ -28,10 +35,7 @@ const Countrie = ({
         <p>
           Capital: <span className={`${theme ? 'dark-span' : 'light-span'}`}>{ capital }</span>
         </p>
-      </div>
-      <div>
-        
-      </div>
+      </div>     
     </div>
   )
 };

@@ -1,0 +1,11 @@
+.btn-back {
+  padding: 5px 25px;
+  display: flex;
+  align-items: center;
+  background:  hsl(0, 0%, 98%);
+}
+
+.btn-back span {
+  margin-left: 8px;
+
+}
