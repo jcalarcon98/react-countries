@@ -15,3 +15,17 @@
 .btn-back span {
   margin-left: 8px;
 }
+
+.img-flag {
+  width: 500px;
+  height: 400px;
+}
+
+.flag-text-container {
+  border: 1px solid red;
+  margin-top: 60px;
+}
+
+.text-section {
+  border: 1px solid blue;
+}

@@ -10,13 +10,14 @@ const CountrieDetail = ({history}) => {
 
   const { countries } = useCountries();
 
-  const countrie = useMemo(() => countries.find(currentCountrie => currentCountrie.alpha2Code === id), [id, countries])
+  const countrie = useMemo(() => countries.find(currentCountrie => currentCountrie.alpha2Code === id), [id, countries]);
 
   if(!countrie){
     return <h1> Loading...</h1>
   }
 
   const  {
+    flag,
     nativeName, 
     population,
     region, 
@@ -38,11 +39,14 @@ const CountrieDetail = ({history}) => {
 
   return (
     <div>
-      
       <button className="btn-back">
         <FaArrowLeft/>
         <span>Back</span>
       </button>
+      <div className="flag-text-container">
+        <img className="img-flag" src={flag} alt=""/>
+        
+      </div>
     </div>
   )
 }
