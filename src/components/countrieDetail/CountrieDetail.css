@@ -17,15 +17,27 @@
 }
 
 .img-flag {
-  width: 500px;
+  width: 550px;
   height: 400px;
 }
 
 .flag-text-container {
+  display: flex;
+  justify-content: space-between;
   border: 1px solid red;
   margin-top: 60px;
 }
 
 .text-section {
+  width: 50%;
   border: 1px solid blue;
+}
+
+.information-text {
+  margin-top: 20px;
+  display: flex;
+}
+
+.right-section-text {
+  margin-left: 20%;
 }
