@@ -1,11 +1,17 @@
 .btn-back {
-  padding: 5px 25px;
+  padding: 5px 30px;
   display: flex;
   align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
   background:  hsl(0, 0%, 98%);
+}
+
+.btn-back:hover {
+  cursor: pointer;
 }
 
 .btn-back span {
   margin-left: 8px;
-
 }
