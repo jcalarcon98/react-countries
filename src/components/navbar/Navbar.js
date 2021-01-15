@@ -11,7 +11,9 @@ const NavBar = () => {
     
     document.body.className = !theme ? "dark-body" : "light-body";
     setTheme(!theme);
+  
   }
+  
   return (
     
     <div className={ `navbar ${ theme ? 'dark-mode': 'light-mode'}` }>
