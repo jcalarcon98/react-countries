@@ -51,10 +51,7 @@ const CountrieDetail = ({history}) => {
 
   if(borders.length > 0){
     borders.forEach(borderCountrie => {
-      console.log(countries, 'JODER');
       const { name } = countries.find(currentCountrie => currentCountrie.alpha3Code === borderCountrie);
-      console.log(name);
-
       borderNames.push(name);
     });
   }
@@ -69,9 +66,18 @@ const CountrieDetail = ({history}) => {
     currentLanguages = languagesArray.join(', ');
   }
 
+  function handleBackButton() {
+
+    if(history.length <= 2){
+      history.push("/");
+    } else {
+      history.goBack();
+    }
+  }
+
   return (
     <div>
-      <button className={`btn-back ${theme ? "dark-text dark-mode" : "light-text light-mode"}`}>
+      <button onClick={ handleBackButton } className={`btn-back ${theme ? "dark-text dark-mode" : "light-text light-mode"}`}>
         <FaArrowLeft/>
         <span>Back</span>
       </button>
