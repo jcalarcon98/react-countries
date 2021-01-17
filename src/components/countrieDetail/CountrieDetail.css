@@ -5,7 +5,6 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: none;
-  background:  hsl(0, 0%, 98%);
 }
 
 .btn-back:hover {
@@ -24,20 +23,46 @@
 .flag-text-container {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
   margin-top: 60px;
 }
 
 .text-section {
+  margin: 40px  0px;
   width: 50%;
-  border: 1px solid blue;
+  font-weight: 600;
 }
 
 .information-text {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
+}
+
+.information-text span {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.information-text p {
+  margin-top: 8px;
 }
 
 .right-section-text {
   margin-left: 20%;
+}
+
+.border-countries-container {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.border-countries-container span{
+  margin-right: 20px;
+}
+
+.border-countrie {
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 5px;
 }

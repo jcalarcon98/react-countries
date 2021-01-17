@@ -18,29 +18,45 @@ const CountrieDetail = ({history}) => {
 
   const  {
     flag,
+    topLevelDomain,
     name,
     nativeName, 
     population,
     region, 
     subregion,
     capital,
-    currencies,
-    languages,
+    currencies, 
+    languages, 
     borders: bordersCountries  
   } = countrie;
   
+  let countriCurrencies;
+  let currentLanguages;
+
   const borderNames = [];
 
-  bordersCountries.forEach(borderCountrie => {
-    const { name } = countries.find(currentCountrie => currentCountrie.alpha3Code === borderCountrie);
-    borderNames.push(name);
-  });
+  if(bordersCountries.length > 0){
+    bordersCountries.forEach(borderCountrie => {
+      const { name } = countries.find(currentCountrie => currentCountrie.alpha3Code === borderCountrie);
+      borderNames.push(name);
+    });
+  }
+
+  if ( currencies.length > 0){
+    const currencieArray =   currencies.map(currencie => currencie.name);
+    countriCurrencies = currencieArray.join(',');
+  }  
+
+  if (languages.length > 0) {
+    const languagesArray =   languages.map(language => language.name);
+    currentLanguages = languagesArray.join(', ');
+  }
 
   console.log(borderNames);
 
   return (
     <div>
-      <button className="btn-back">
+      <button className={`btn-back ${theme ? "dark-text dark-mode" : "light-text light-mode"}`}>
         <FaArrowLeft/>
         <span>Back</span>
       </button>
@@ -69,19 +85,22 @@ const CountrieDetail = ({history}) => {
             </div>
             <div className="right-section-text">
               <p>
-                Top Level Domain: <span>FIX</span>
+                Top Level Domain: <span>{ topLevelDomain.join(',') }</span>
               </p>
               <p>
-                Currencies: <span>FIX</span>
+                Currencies: <span>{ countriCurrencies || 'NO DATA'}</span>
               </p>
               <p>
-                Languages: <span>FIX</span>
+                Languages: <span>{ currentLanguages || 'NO LANGUAGES' }</span>
               </p>
             </div>
           </div>
 
-          <div>
+          <div className="border-countries-container">
             <span>Border Countries:</span>
+            {
+              borderNames.map((border, index) => <div key={ index } className={`border-countrie ${theme ? "dark-mode" : "light-mode"}`}>{ border }</div>)
+            }
           </div>
 
           
