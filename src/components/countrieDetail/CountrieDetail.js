@@ -1,21 +1,35 @@
-import React, { useMemo } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { useCountries } from '../../providers/CountrieProvider';
 import {FaArrowLeft} from 'react-icons/fa';
 import './CountrieDetail.css';
 import { useTheme } from '../../providers/ThemeColorProvider';
+import { getCountrieByCode, getCountriesByContinent } from '../../api';
 
 const CountrieDetail = ({history}) => {
   
   const { id } = useParams();
-  const { countries } = useCountries();
   const { theme } = useTheme();
-  const countrie = useMemo(() => countries.find(currentCountrie => currentCountrie.alpha2Code === id), [id, countries]);
+  
+  const [ currentCountrie, setCurrentCountrie ] = useState();
+  const [ countries, setCountries] = useState();
 
-  if(!countrie){
+  useEffect(() => {
+    
+    async function getInformation(){
+      const countrie = await getCountrieByCode(id);
+      setCurrentCountrie(countrie);
+      const fetchedCountries = await getCountriesByContinent(countrie.region);
+      setCountries(fetchedCountries);
+    } 
+    getInformation();
+
+  }, [id]);
+
+
+  if(!currentCountrie || !countries ){
     return <h1> Loading...</h1>
   }
-
+  
   const  {
     flag,
     topLevelDomain,
@@ -27,17 +41,20 @@ const CountrieDetail = ({history}) => {
     capital,
     currencies, 
     languages, 
-    borders: bordersCountries  
-  } = countrie;
-  
+    borders  
+  } = currentCountrie;
+
   let countriCurrencies;
   let currentLanguages;
 
   const borderNames = [];
 
-  if(bordersCountries.length > 0){
-    bordersCountries.forEach(borderCountrie => {
+  if(borders.length > 0){
+    borders.forEach(borderCountrie => {
+      console.log(countries, 'JODER');
       const { name } = countries.find(currentCountrie => currentCountrie.alpha3Code === borderCountrie);
+      console.log(name);
+
       borderNames.push(name);
     });
   }
@@ -51,8 +68,6 @@ const CountrieDetail = ({history}) => {
     const languagesArray =   languages.map(language => language.name);
     currentLanguages = languagesArray.join(', ');
   }
-
-  console.log(borderNames);
 
   return (
     <div>

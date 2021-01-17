@@ -13,24 +13,17 @@ export const CountrieProvider = ({children}) => {
     countrie: '',
   }
   const { filter, changeCountrie, changeContinent } = useFilter(initialFilterState);
-  
   const { continent, countrie } = filter;
-
-  const [countries, setCountries] = useState([]);
-
-  const [currentCountries, setCurrentCountries] = useState([]);
+  const [ countries, setCountries ] = useState([]);
+  const [ currentCountries, setCurrentCountries ] = useState([]);
 
   useEffect(() => {
-
     setCountries(currentCountries.filter(currentCountrie => currentCountrie.name.toLowerCase().includes(countrie.toLowerCase())));
-
   }, [currentCountries, countrie]);
 
-  
   useEffect(() => {
     
     const fetchCountries = async() => {
-
       const fetchedCountries = await getCountriesByContinent(continent);
       setCurrentCountries(fetchedCountries);
       setCountries(fetchedCountries);
@@ -40,6 +33,7 @@ export const CountrieProvider = ({children}) => {
 
   }, [continent]);
 
+  //TODO: Bug inside search and borderCountries.
   return (
     <CountrieContext.Provider value={ { filter, changeCountrie, changeContinent, countries } }>
       { children }
