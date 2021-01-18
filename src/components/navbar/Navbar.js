@@ -10,6 +10,7 @@ const NavBar = () => {
   const handleDarkMode = () => {
     
     document.body.className = !theme ? "dark-body" : "light-body";
+    localStorage.setItem('theme', !theme);
     setTheme(!theme);
   
   }

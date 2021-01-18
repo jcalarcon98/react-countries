@@ -6,7 +6,6 @@ const AppRouter = () => {
   return (
     <HashRouter>
       <div>
-        
         <Switch>
           <Route exact path="/countrie/:id" component={ CountrieDetail }/>
           <Route exact path="/" component={ Countries }/>
