@@ -1,10 +1,10 @@
 import React from 'react'
-import {BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import {HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { Countries } from '../components';
 import CountrieDetail from '../components/countrieDetail/CountrieDetail';
 const AppRouter = () => {
   return (
-    <Router>
+    <HashRouter>
       <div>
         
         <Switch>
@@ -13,7 +13,7 @@ const AppRouter = () => {
           <Redirect to="/"/>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   )
 }
 
