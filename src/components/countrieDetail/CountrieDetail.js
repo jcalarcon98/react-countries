@@ -120,9 +120,14 @@ const CountrieDetail = ({history}) => {
           <div className="border-countries-container">
             <span>Border Countries:</span>
             <div className="border-box">
+
               {
+                borderNames.length > 0 ?
                 borderNames.map((border, index) => <div key={ index } className={`border-countrie ${theme ? "dark-mode" : "light-mode"}`}>{ border }</div>)
+                : <p className={`border-countrie ${theme ? "dark-mode" : "light-mode"}`}>There aren't borders</p>
               }
+
+              
             </div>            
           </div>          
         </div>
