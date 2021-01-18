@@ -46,6 +46,11 @@
   margin-top: 8px;
 }
 
+.border-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .right-section-text {
   margin-left: 20%;
 }
@@ -65,4 +70,86 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-right: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .btn-back {
+    margin-left: 15px;
+  }
+  
+  .information-text {
+    flex-direction: column;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+  
+  .border-countries-container {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .img-flag {
+    width: 100%;
+    height: 220px;
+  }
+
+  .flag-text-container {
+    margin: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .right-section-text {
+    margin-left: 0;
+    margin-top: 10%;
+  }
+  
+  .text-section {
+    width: 100%;
+    font-weight: 600;
+  }
+  
+  .border-box {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .img-flag {
+    width: 100%;
+  }
+
+  .flag-text-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .text-section {
+    width: 100%;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .img-flag {
+    width: 100%;
+  }
+
+  .flag-text-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .text-section {
+    width: 100%;
+    font-weight: 600;
+  }
 }
